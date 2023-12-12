@@ -1,4 +1,4 @@
-# Contributing to minirouter
+# Contributing to `@johno/router`
 
 ## Code of Conduct
 
@@ -29,8 +29,8 @@ This project uses [bun](https://bun.sh) to manage dependencies and tasks.
 #### Installation
 
 ```sh
-git clone https://github.com/johno/minirouter
-cd minirouter
+git clone https://github.com/johno/router
+cd router
 bun install
 ```
 
@@ -40,14 +40,5 @@ bun install
 bun test
 ```
 
-#### Reinstalling dependencies and clearing caches
-
-On rare ocassions, especially when changing configurations, you might
-need to clear the cache and reinstall the dependencies:
-
-```sh
-bun run nuke
-```
-
-[code of conduct]: https://github.com/johno/minirouter/blob/main/code-of-conduct.md
-[issue]: https://github.com/johno/minirouter/issues/new
+[code of conduct]: https://github.com/johno/router/blob/main/code-of-conduct.md
+[issue]: https://github.com/johno/router/issues/new
