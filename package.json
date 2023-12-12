@@ -1,0 +1,30 @@
+{
+  "name": "@johno/router",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist src/index.ts",
+    "bump": "ncu -u",
+    "clean": "rm -rf node_modules dist .turbo",
+    "dev": "bun run build --watch",
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "test": "bun test"
+  },
+  "files": [
+    "dist/**",
+    "readme.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johno/router"
+  },
+  "homepage": "https://github.com/johno/router",
+  "devDependencies": {
+    "bun-types": "^1.0.15"
+  }
+}
