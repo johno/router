@@ -121,6 +121,8 @@ To learn about how to contribute to this project, please read the [contributing 
 
 [MIT](license.md)
 
+---
+
 > Built by [johno](https://johno.com)
 
 [Request]: https://developer.mozilla.org/en-US/docs/Web/API/Request
