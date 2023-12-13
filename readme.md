@@ -39,7 +39,7 @@ What makes `@johno/router` interesting is what it doesn't do.
 - Use middleware, we recommend using lib functions
 - Minify or obfuscate code (readable and debuggable output)
 
-## Handler API
+#### Handler API
 
 `@johno/router` uses a simple handler API that is compatible with the [Request][] and [Response][] objects. It _augments_
 edge function handlers with an additional argument, `routeInfo`. This means you can drop in `@johno/router` to any serverless
@@ -115,3 +115,6 @@ To learn about how to contribute to this project, please read the [contributing 
 ---
 
 > Built by [johno](https://johno.com)
+
+[Request]: https://developer.mozilla.org/en-US/docs/Web/API/Request
+[Response]: https://developer.mozilla.org/en-US/docs/Web/API/Response
