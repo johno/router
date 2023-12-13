@@ -69,16 +69,16 @@ npm install @johno/router
 ## Usage
 
 ```js
-import { Router } from "@johno/router";
+import { Router, text } from "@johno/router";
 
 const router = new Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello world!");
+  text("Hello world!");
 });
 
 router.get("/hello/:name", (req, res, routeInfo) => {
-  res.send(`Hello ${routeInfo.params.name}!`);
+  text(`Hello ${routeInfo.params.name}!`);
 });
 ```
 

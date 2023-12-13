@@ -1,11 +1,11 @@
 import { test, expect, beforeEach } from "bun:test";
 
-import { MiniRouter, json } from "./router";
+import { Router, json } from "./router";
 
-let router: MiniRouter;
+let router: Router;
 
 beforeEach(() => {
-  router = new MiniRouter();
+  router = new Router();
 });
 
 test("routes to a path", async () => {
@@ -124,7 +124,7 @@ test("matches HTTP methods", async () => {
 });
 
 test("passes route params to the handler", async () => {
-  router.get("/test/:id", async (request, _env, _ctx, routeInfo) =>
+  router.get("/test/:id", async (_request, _env, _ctx, routeInfo) =>
     json(routeInfo?.params ?? {})
   );
 
@@ -140,7 +140,7 @@ test("passes route params to the handler", async () => {
 });
 
 test("ignores duplicate and trailing slashes", async () => {
-  router.get("/test///foo/", async (request, _env, _ctx) =>
+  router.get("/test///foo/", async (_request, _env, _ctx) =>
     json({ hello: "world" })
   );
 

@@ -75,7 +75,7 @@ class Route {
   }
 }
 
-export class MiniRouter {
+export class Router {
   private routes: Route[] = [];
 
   get(path: string, handler: RouteHandler) {
