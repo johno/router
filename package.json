@@ -9,10 +9,13 @@
     "build": "bun build src/index.ts --outdir dist",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist src/index.ts",
     "bump": "ncu -u",
+    "changeset": "changeset",
     "clean": "rm -rf node_modules dist .turbo",
     "dev": "bun run build --watch",
     "lint": "TIMING=1 eslint \"**/*.ts*\"",
-    "test": "bun test"
+    "publish": "bun run build && changeset publish",
+    "test": "bun test",
+    "version": "changeset version"
   },
   "files": [
     "dist/**",
@@ -25,6 +28,7 @@
   },
   "homepage": "https://github.com/johno/router",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "bun-types": "^1.0.15"
   }
 }

@@ -12,6 +12,8 @@ router
   .get("/hello/:name", (req, env, ctx, routeInfo) => {
     json({ name: routeInfo.params.name });
   });
+
+router.handle(request, env, ctx);
 ```
 
 ## Features
