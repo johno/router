@@ -68,6 +68,14 @@ npm install @johno/router
 
 ## Usage
 
+If you've used a router before, `@johno/router` will feel familiar.
+To define a set of routes you:
+
+- Instantiate a router
+- Add routes for given paths and HTTP methods
+- Pass each route a _handler_ function
+- Call `handle` with the request and its environment
+
 ```js
 import { Router, text } from "@johno/router";
 
@@ -80,6 +88,33 @@ router.get("/", (req, res) => {
 router.get("/hello/:name", (req, res, routeInfo) => {
   text(`Hello ${routeInfo.params.name}!`);
 });
+
+router.handle(request, env, ctx);
+```
+
+### Using with Cloudflare Workers
+
+`@johno/router` is designed to work seamlessly with Cloudflare Workers.
+The `handle` method accepts the `Request`, `Env`, and `Context` objects
+which you can leverage in your handlers.
+
+```js
+import { Router, text, json } from "@johno/router";
+
+const router = new Router();
+
+export default {
+  async fetch(
+    request: Request,
+    env: Env,
+    ctx: ExecutionContext
+  ): Promise<Response> {
+    return router
+      .post("/hello", () => text("Hello world!"))
+      .post("/world", () => json({ hello: "world" }))
+      .handle(request, env, ctx);
+  },
+};
 ```
 
 ## Development
