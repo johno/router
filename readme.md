@@ -108,11 +108,18 @@ export default {
 };
 ```
 
+## Code of Conduct
+
+By participating in our community and interacting with this repository, you agree
+to abide by our [code of conduct](code-of-conduct.md).
+
 ## Development
 
 To learn about how to contribute to this project, please read the [contributing guide](.github/contributing.md).
 
----
+## License
+
+[MIT](license.md)
 
 > Built by [johno](https://johno.com)
 
