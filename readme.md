@@ -45,17 +45,6 @@ What makes `@johno/router` interesting is what it doesn't do.
 edge function handlers with an additional argument, `routeInfo`. This means you can drop in `@johno/router` to any serverless
 function environment and you will work with their existing APIs.
 
-## TODO
-
-`@johno/router` is a work in progress. Here are some additional features that are planned:
-
-- [x] Named path params
-- [x] Wildcard (catchall) routes
-- [ ] Query params
-- [ ] Base URL config
-- [ ] Transform route args
-- [ ] JSDoc comments
-
 ## Installation
 
 Use your favorite package manager to install `@johno/router`:
